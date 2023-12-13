@@ -1,12 +1,12 @@
 <template>
-  <header class="main-menu p-4">
-    <nav>
+  <header class="ps-4">
+    <nav class="" >
       <ul class="nav nav-underline">
-        <li class="nav-item">
-          <RouterLink :class="['nav-link text-black fs-6 fw-medium', {'active': route.path === '/' || route.path === '/lines/:line'}]" to="/">Bus Lines</RouterLink>
+        <li class="nav-item ">
+          <RouterLink :class="['h-100 d-flex align-items-center tab-menu nav-link fs-6 fw-medium', {'active border-bottom border-2 border-primary': route.path.match(routeRegex)}]" to="/">Bus Lines</RouterLink>
         </li>
-        <li class="nav-item">
-          <RouterLink :class="['nav-link text-black fs-6 fw-medium', {'active': route.path === '/stops'}]" to="/stops">Stops</RouterLink>
+        <li class="nav-item main-menu">
+          <RouterLink :class="['h-100 d-flex align-items-center tab-menu nav-link fs-6 fw-medium', {'active border-bottom border-2 border-primary': route.path === '/stops'}]" to="/stops">Stops</RouterLink>
         </li>
       </ul>
     </nav>
@@ -15,4 +15,5 @@
 <script setup lang="ts">
   import { RouterLink, useRoute } from 'vue-router';
   const route = useRoute();
+  const routeRegex = /(\/lines\/.*)|(\/$)/;
 </script>

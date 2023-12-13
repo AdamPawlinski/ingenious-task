@@ -2,13 +2,13 @@
   <div class="container">
     <LinesMenu />
   </div>
-  <div class="container h-100">
-    <div class="row h-100">
-      <div class="col h-100">
-        <StopsList />
+  <div class="container bg-transparent">
+    <div class="row mt-3">
+      <div class="col ps-0">
+        <StopsList/>
       </div>
-      <div class="col">
-        <TimesList />
+      <div class="col pe-0">
+        <TimesList class="container"/>
       </div>
     </div>
   </div>
