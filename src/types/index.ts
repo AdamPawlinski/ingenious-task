@@ -6,8 +6,5 @@ export type Stop = {
 }
 
 export type State = {
-  busLines: [],
   stopsData: Stop[],
-  order: [],
-  times: [],
 }

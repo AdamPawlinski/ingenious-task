@@ -1,3 +1,4 @@
-export const SET_STOPS = (state, stops) => {
-  state.stops = stops
+import { State, Stop } from '../types'
+export const setStops = (state: State, stops: Stop[] ) => {
+  state.stopsData = stops;
 }
