@@ -1,8 +1,8 @@
 import axios from 'axios';
-import { Commit } from 'vuex'
+import { Commit } from 'vuex';
 
 export const fetchStopsData = async({ commit }: { commit: Commit }) => {
-  await axios.get('http://localhost:3000/stops').then(
+  await axios.get(`${process.env.VUE_APP_BASE_URI}/stops`).then(
     res => {
       commit('setStops', res.data);
     }
