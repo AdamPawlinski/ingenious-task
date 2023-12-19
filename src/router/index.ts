@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import AllStopsList from '../components/AllStopsList.vue';
 import StopsList from '../components/StopsList.vue';
-import StopsContent from '../components/StopsContent.vue';
+import StopsContent from '../layout/StopsContent.vue';
 import TimesList from '../components/TimesList.vue';
-import PageNotFound from '../components/PageNotFound.vue';
+import PageNotFound from '../layout/PageNotFound.vue';
 
 const routes: Array<RouteRecordRaw> = [
   { 

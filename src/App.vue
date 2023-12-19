@@ -9,7 +9,7 @@
 </template>
 <script setup>
     import { useStore } from 'vuex';
-    import MainMenu from './components/MainMenu';
+    import MainMenu from './layout/MainMenu';
     import { useRoute, RouterView } from 'vue-router';
 
     const route = useRoute();

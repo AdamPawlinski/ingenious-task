@@ -14,8 +14,8 @@
   </div>
 </template>
 <script setup lang="ts"> 
-  import LinesMenu from './LinesMenu.vue';
-  import StopsList from './StopsList.vue';
-  import TimesList from './TimesList.vue';
+  import LinesMenu from '../components/LinesMenu.vue';
+  import StopsList from '../components/StopsList.vue';
+  import TimesList from '../components/TimesList.vue';
 
 </script>

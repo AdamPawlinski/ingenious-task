@@ -1,11 +1,16 @@
 <template>
   <div class="container px-0">
-    <div class="content-wrapper d-flex align-items-center justify-content-center" v-if="!route.params.stop">
+    <div v-if="!route.params.line" class="content-wrapper d-flex align-items-center justify-content-center">
+      Please select the bus line first
+    </div>
+    <div v-else-if="!route.params.stop" class="content-wrapper d-flex align-items-center justify-content-center">
       Please select the bus stop first
     </div>
-    <div class="ms-3 pt-3 fs-6 fw-semibold" v-if="route.params.stop">Bus Stop: {{ route.params.stop }}</div>
-    <div class="list-item border-bottom border-secondary-subtle d-flex align-items-center ps-3">
-      Time 
+    <div v-else>
+      <div class="ms-3 pt-3 fs-6 fw-semibold">Bus Stop: {{ route.params.stop }}</div>
+      <div class="list-item border-bottom border-secondary-subtle d-flex align-items-center fw-semibold ps-3">
+        Time 
+      </div>
     </div>
     <ul class="content-wrapper list-group list-group-flush">
       <li v-for="time in stopTimes" :key="time" class="list-item d-flex align-items-center list-group-item">{{ time }}</li>
