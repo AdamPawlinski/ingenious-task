@@ -11,7 +11,8 @@
       <li v-for="stopItem in (results || allStops)" :key="stopItem.stop" class="list-item d-flex align-items-center list-group-item">
         <span v-if="!results" class="fw-normal">{{stopItem}}</span>
         <template v-else>
-          <span >{{ stopItem.highlight }}</span>
+          <span >{{ stopItem.begin }}</span>
+          <span class="fw-semibold">{{ stopItem.highlight }}</span>
           <span>{{ stopItem.rest }}</span>
         </template>
       </li>
@@ -32,11 +33,14 @@
 
   watch(searchValue, (searchValue: string) => {
     results.value = allStops.value
-    .filter((stop: string) => stop.toLowerCase().startsWith(searchValue.toLowerCase()))
+    .filter((stop: string) => stop.toLowerCase().match(searchValue.toLowerCase()))
     .map((stop: string) => {
-      const highlight = stop.substring(0, searchValue.length);
-      const rest = stop.substring(searchValue.length);
-      return { highlight, rest, stop };
+      const startIndex = stop.search(searchValue)
+      const highlight = stop.substring(startIndex, startIndex === -1 ? searchValue.length : startIndex + searchValue.length);
+      const begin = stop.substring(0, startIndex);
+      const rest = stop.substring(begin.length + searchValue.length);
+      console.log(startIndex, highlight, begin, rest, stop, searchValue.length);
+      return { highlight, begin, rest, stop };
     });
   })
 </script>
