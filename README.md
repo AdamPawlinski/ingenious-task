@@ -1,4 +1,4 @@
-# Bus stops interview task
+# Bus stops interview task requirements
 Your have to implement simple board for bus stops. Directory `docs` contains `openapi` specification for the `api` response - feel free to play with that to check how api was implemented. <strong>Don't install any other library</strong>
 
 ## Required environment
@@ -45,3 +45,21 @@ Your have to implement simple board for bus stops. Directory `docs` contains `op
    5. User can filter list by the search bar
       1. The "stops" list should be filtered after user input
       2. If search bar is empty all stops should be visible
+
+
+# Finished project availability
+
+You can clone the project locally and run:
+1. `yarn` - install dependencies
+2. `yarn api` - run the API
+3. `yarn serve` - for the Vue application
+
+Or try deployed version: https://ingenious-task.vercel.app/ , but please note following:
+
+
+---
+**NOTE**
+
+Since the server in deployed on the free render hosting site it needs time to be rerun so there could you need to refresh site few times since data appears.
+
+---
