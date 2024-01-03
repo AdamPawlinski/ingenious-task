@@ -3,11 +3,11 @@
     <LinesMenu />
   </div>
   <div class="container bg-transparent">
-    <div class="row mt-3">
-      <div class="col ps-0">
+    <div class="content-container">
+      <div class="content-container-lines">
         <StopsList/>
       </div>
-      <div class="col pe-0">
+      <div class="content-container-stops">
         <TimesList class="container"/>
       </div>
     </div>
