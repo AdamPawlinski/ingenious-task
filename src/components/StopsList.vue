@@ -26,6 +26,6 @@
   const route = useRoute();
   const router = useRouter();
   
-  const lineStops = computed(() => store.getters.getLineStops(parseInt(route.params.line as string)))
+  const lineStops = computed<string[]>(() => store.getters.getLineStops(parseInt(route.params.line as string)))
   const onStopClick = (stop: string) => router.push({ name: 'time', params: { stop } });
 </script>

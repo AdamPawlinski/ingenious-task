@@ -2,7 +2,7 @@
   <div class="container">
     <LinesMenu />
   </div>
-  <div class="container bg-transparent">
+  <div class="container bg-transparent px-0">
     <div class="content-container">
       <div class="content-container-lines">
         <StopsList/>

@@ -44,6 +44,7 @@ body {
     display: flex;
     flex: 1 0 0;
     flex-direction: column;
+    margin-top: 10px;
   }
 
   &-stops {
@@ -75,6 +76,7 @@ body {
     &-lines {
       padding-left: 0;
       margin-right: 10px;
+      margin-top: 0;
     }
   
     &-stops {

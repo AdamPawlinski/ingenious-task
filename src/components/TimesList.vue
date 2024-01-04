@@ -23,5 +23,5 @@
   import { useRoute } from 'vue-router';  
   const store = useStore();
   const route = useRoute();   
-  const stopTimes = computed(() => store.getters.getStopTimes(route.params.stop))
+  const stopTimes = computed<string | string[]>(() => store.getters.getStopTimes(route.params.stop))
 </script>

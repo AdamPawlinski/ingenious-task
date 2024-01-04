@@ -1,12 +1,12 @@
 import { State } from '../types'
 
-export const getLines = (state: State) => {  
+export const getLines = (state: State): number[] => {  
   const allLines = state.stopsData.map(stop => stop.line);
   allLines.sort()
   return allLines.filter((stop, index, stops) => stops.indexOf(stop) === index);
 }
 
-export const getStops = (state: State) => {
+export const getStops = (state: State): string[] => {
   const allStops = state.stopsData.map(stop => stop.stop)
   const stopsUnique = allStops.filter((stop, index, stops) => stops.indexOf(stop) === index);
   return stopsUnique.sort((prev, next) => {

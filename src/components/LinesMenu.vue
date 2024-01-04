@@ -15,6 +15,6 @@
   const route = useRoute();
   const router = useRouter();
 
-  const lines = computed(() => store.getters.getLines);
+  const lines = computed<number[]>(() => store.getters.getLines);
   const onLineClick = (line: string) => router.push({ name: 'line', params: { line } });
 </script>

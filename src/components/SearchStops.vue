@@ -1,6 +1,6 @@
 <template>
   <div class="stops-search input-group rounded p-2">
-    <input :value="modelValue" @input="$emit('update:modelValue', $event.target.value)" type="search" class="form-control rounded-start rounded-1 border-end-0 border" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />
+    <input :value="modelValue" @input="$emit('update:modelValue', $event?.target?.value)" type="search" class="form-control rounded-start rounded-1 border-end-0 border" placeholder="Search..." aria-label="Search" aria-describedby="search-addon" />
     <span class="input-group-append border-0">
        <button class="btn btn-outline-secondary border-start-0 border rounded-start-0 text-secondary-emphasis bg-transparent" type="button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
@@ -12,9 +12,10 @@
 </template>
 <script setup lang="ts">
 import { defineEmits, defineProps } from 'vue';
-defineProps(['modelValue'])
-const emits = defineEmits<{
-  (e: 'update:modelValue'): void
+defineProps<{modelValue: string}>()
+
+defineEmits<{
+  'update:modelValue': [event: string]
 }>()
 
 </script> 

@@ -31,7 +31,7 @@
   const results = ref();
   const searchValue = ref('');
 
-  watch(searchValue, (searchValue: string) => {
+  watch(searchValue, (searchValue) => {
     results.value = allStops.value
     .filter((stop: string) => stop.toLowerCase().match(searchValue.toLowerCase()))
     .map((stop: string) => {
